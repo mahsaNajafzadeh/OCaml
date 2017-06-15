@@ -1,0 +1,290 @@
+"courseware.ml" 1 0 4 "courseware.ml" 1 0 10
+type(
+  unit -> 'a
+)
+ident(
+  def unimpl "courseware.ml" 2 34 34 "courseware.ml" 1 0 -1
+)
+"courseware.ml" 1 0 11 "courseware.ml" 1 0 13
+type(
+  unit
+)
+"courseware.ml" 1 0 16 "courseware.ml" 1 0 24
+type(
+  string -> 'a
+)
+ident(
+  ext_ref Pervasives.failwith
+)
+"courseware.ml" 1 0 25 "courseware.ml" 1 0 33
+type(
+  string
+)
+"courseware.ml" 1 0 16 "courseware.ml" 1 0 33
+type(
+  'a
+)
+"courseware.ml" 2 34 38 "courseware.ml" 2 34 43
+type(
+  'a -> unit
+)
+ident(
+  def print "courseware.ml" 5 53 53 "courseware.ml" 1 0 -1
+)
+"courseware.ml" 2 34 44 "courseware.ml" 2 34 45
+type(
+  'a
+)
+ident(
+  def x "courseware.ml" 2 34 48 "courseware.ml" 2 34 50
+)
+"courseware.ml" 2 34 48 "courseware.ml" 2 34 50
+type(
+  unit
+)
+"courseware.ml" 13 145 151 "courseware.ml" 13 145 157
+type(
+  'a
+)
+ident(
+  def select "courseware.ml" 14 170 172 "courseware.ml" 18 271 274
+)
+"courseware.ml" 13 145 160 "courseware.ml" 13 145 166
+type(
+  unit -> 'a
+)
+ident(
+  int_ref unimpl "courseware.ml" 1 0 4 "courseware.ml" 1 0 10
+)
+"courseware.ml" 13 145 167 "courseware.ml" 13 145 169
+type(
+  unit
+)
+"courseware.ml" 13 145 160 "courseware.ml" 13 145 169
+type(
+  'a
+)
+"courseware.ml" 14 170 176 "courseware.ml" 14 170 183
+type(
+  'b
+)
+ident(
+  def select1 "courseware.ml" 15 196 198 "courseware.ml" 18 271 274
+)
+"courseware.ml" 14 170 186 "courseware.ml" 14 170 192
+type(
+  unit -> 'b
+)
+ident(
+  int_ref unimpl "courseware.ml" 1 0 4 "courseware.ml" 1 0 10
+)
+"courseware.ml" 14 170 193 "courseware.ml" 14 170 195
+type(
+  unit
+)
+"courseware.ml" 14 170 186 "courseware.ml" 14 170 195
+type(
+  'b
+)
+"courseware.ml" 15 196 202 "courseware.ml" 15 196 208
+type(
+  'c
+)
+ident(
+  def insert "courseware.ml" 16 221 223 "courseware.ml" 18 271 274
+)
+"courseware.ml" 15 196 211 "courseware.ml" 15 196 217
+type(
+  unit -> 'c
+)
+ident(
+  int_ref unimpl "courseware.ml" 1 0 4 "courseware.ml" 1 0 10
+)
+"courseware.ml" 15 196 218 "courseware.ml" 15 196 220
+type(
+  unit
+)
+"courseware.ml" 15 196 211 "courseware.ml" 15 196 220
+type(
+  'c
+)
+"courseware.ml" 16 221 227 "courseware.ml" 16 221 233
+type(
+  'd
+)
+ident(
+  def delete "courseware.ml" 17 246 248 "courseware.ml" 18 271 274
+)
+"courseware.ml" 16 221 236 "courseware.ml" 16 221 242
+type(
+  unit -> 'd
+)
+ident(
+  int_ref unimpl "courseware.ml" 1 0 4 "courseware.ml" 1 0 10
+)
+"courseware.ml" 16 221 243 "courseware.ml" 16 221 245
+type(
+  unit
+)
+"courseware.ml" 16 221 236 "courseware.ml" 16 221 245
+type(
+  'd
+)
+"courseware.ml" 17 246 252 "courseware.ml" 17 246 258
+type(
+  'e
+)
+ident(
+  def update "courseware.ml" 17 246 270 "courseware.ml" 18 271 274
+)
+"courseware.ml" 17 246 261 "courseware.ml" 17 246 267
+type(
+  unit -> 'e
+)
+ident(
+  int_ref unimpl "courseware.ml" 1 0 4 "courseware.ml" 1 0 10
+)
+"courseware.ml" 17 246 268 "courseware.ml" 17 246 270
+type(
+  unit
+)
+"courseware.ml" 17 246 261 "courseware.ml" 17 246 270
+type(
+  'e
+)
+"courseware.ml" 23 310 316 "courseware.ml" 23 310 320
+type(
+  'a list -> int
+)
+ident(
+  def size "courseware.ml" 24 330 332 "courseware.ml" 28 429 432
+)
+"courseware.ml" 23 310 323 "courseware.ml" 23 310 329
+type(
+  'a list -> int
+)
+ident(
+  ext_ref length
+)
+"courseware.ml" 24 330 336 "courseware.ml" 24 330 343
+type(
+  ('b -> unit) -> 'b list -> unit
+)
+ident(
+  def foreach "courseware.ml" 25 351 353 "courseware.ml" 28 429 432
+)
+"courseware.ml" 24 330 346 "courseware.ml" 24 330 350
+type(
+  ('b -> unit) -> 'b list -> unit
+)
+ident(
+  ext_ref iter
+)
+"courseware.ml" 25 351 357 "courseware.ml" 25 351 360
+type(
+  'c -> 'd -> 'e
+)
+ident(
+  def max "courseware.ml" 26 377 379 "courseware.ml" 28 429 432
+)
+"courseware.ml" 25 351 361 "courseware.ml" 25 351 362
+type(
+  'c
+)
+ident(
+  def f "courseware.ml" 25 351 363 "courseware.ml" 25 351 376
+)
+"courseware.ml" 25 351 363 "courseware.ml" 25 351 364
+type(
+  'd
+)
+ident(
+  def l "courseware.ml" 25 351 367 "courseware.ml" 25 351 376
+)
+"courseware.ml" 25 351 367 "courseware.ml" 25 351 373
+type(
+  unit -> 'e
+)
+ident(
+  int_ref unimpl "courseware.ml" 1 0 4 "courseware.ml" 1 0 10
+)
+"courseware.ml" 25 351 374 "courseware.ml" 25 351 376
+type(
+  unit
+)
+"courseware.ml" 25 351 367 "courseware.ml" 25 351 376
+type(
+  'e
+)
+"courseware.ml" 26 377 383 "courseware.ml" 26 377 386
+type(
+  'f -> 'g -> 'h
+)
+ident(
+  def min "courseware.ml" 27 403 405 "courseware.ml" 28 429 432
+)
+"courseware.ml" 26 377 387 "courseware.ml" 26 377 388
+type(
+  'f
+)
+ident(
+  def f "courseware.ml" 26 377 389 "courseware.ml" 26 377 402
+)
+"courseware.ml" 26 377 389 "courseware.ml" 26 377 390
+type(
+  'g
+)
+ident(
+  def l "courseware.ml" 26 377 393 "courseware.ml" 26 377 402
+)
+"courseware.ml" 26 377 393 "courseware.ml" 26 377 399
+type(
+  unit -> 'h
+)
+ident(
+  int_ref unimpl "courseware.ml" 1 0 4 "courseware.ml" 1 0 10
+)
+"courseware.ml" 26 377 400 "courseware.ml" 26 377 402
+type(
+  unit
+)
+"courseware.ml" 26 377 393 "courseware.ml" 26 377 402
+type(
+  'h
+)
+"courseware.ml" 27 403 409 "courseware.ml" 27 403 412
+type(
+  'i -> 'j -> 'k
+)
+ident(
+  def sum "courseware.ml" 27 403 428 "courseware.ml" 28 429 432
+)
+"courseware.ml" 27 403 413 "courseware.ml" 27 403 414
+type(
+  'i
+)
+ident(
+  def f "courseware.ml" 27 403 415 "courseware.ml" 27 403 428
+)
+"courseware.ml" 27 403 415 "courseware.ml" 27 403 416
+type(
+  'j
+)
+ident(
+  def l "courseware.ml" 27 403 419 "courseware.ml" 27 403 428
+)
+"courseware.ml" 27 403 419 "courseware.ml" 27 403 425
+type(
+  unit -> 'k
+)
+ident(
+  int_ref unimpl "courseware.ml" 1 0 4 "courseware.ml" 1 0 10
+)
+"courseware.ml" 27 403 426 "courseware.ml" 27 403 428
+type(
+  unit
+)
+"courseware.ml" 27 403 419 "courseware.ml" 27 403 428
+type(
+  'k
+)

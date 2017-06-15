@@ -1,0 +1,4 @@
+"Resource: /Users/mahsa/Documents/workspace3/Course/courseware.ml": "3\208\191\192\233\018.\023\205\213\219P\246l\200r"
+"Rule: ocaml dependencies ml (%=courseware )": "\161\152\254B\200\199\222\226\030\006;\168\242C\031\208"
+"Rule: ocaml: ml -> cmo & cmi (%=courseware )": ")\174\151\012A\164\183FyOY\031#?p\210"
+"Rule: ocaml: cmo* -> byte (%=courseware )": "\250\166\195\t\253\232i\192p6\241E\214\243\145\225"
