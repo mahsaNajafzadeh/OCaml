@@ -1,0 +1,4 @@
+"Rule: ocaml dependencies ml (%=xz )": "\029\184\031\149\136\177fd\195v\150\130Q\213{\179"
+"Resource: /Users/mahsa/Documents/workspace3/sd/xz.ml": "\247g\248R68'J\022\221R\242\140\203_z"
+"Rule: ocaml: cmo* -> byte (%=xz )": "M\202\135\182|\138\135\004c_\002\160\193\011\001\183"
+"Rule: ocaml: ml -> cmo & cmi (%=xz )": "\031;9\015\235\142\132,\0025*\171\198\000\t\027"

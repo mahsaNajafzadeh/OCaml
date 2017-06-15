@@ -1,0 +1,18 @@
+"xz.ml" 1 0 0 "xz.ml" 1 0 12
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_string
+)
+"xz.ml" 1 0 13 "xz.ml" 1 0 29
+type(
+  string
+)
+"xz.ml" 1 0 0 "xz.ml" 1 0 29
+call(
+  stack
+)
+type(
+  unit
+)
