@@ -22,7 +22,6 @@ module S = struct
   let max f l = unimpl ()
   let min f l = unimpl ()
   let sum f l = unimpl ()
-	let group f l=unimpl ()
 end
 
  type id
