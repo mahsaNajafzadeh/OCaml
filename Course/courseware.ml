@@ -8,8 +8,8 @@ module U = Unix
 
  type table_name = 
    |Student
-	| Course
-	| Enroll
+   | Course
+   | Enroll
  
 module SQL = struct
   let select = unimpl ()
@@ -31,7 +31,7 @@ end
 
 type student = {s_id:id}
 type course={c_id: id; mutable c_capacity: int }
-type enroll={s_id: id; c_id: id}
+type enroll={e_s_id: id; e_c_id: id}
 
 (*
  * New student regsitertion. 
@@ -46,7 +46,7 @@ let new_register_txn s_id =
  *)
 
 let deregeister_txn s_id =
-			SQL.delete Student  
+			SQL.delete [Student] 
 			 (fun st -> st.s_id=s_id ) 
 			
 (*
@@ -60,8 +60,8 @@ let add_course_txn	c_id  c_capacity =
  * removing  a course. 
  *)
 
-let remove_course_txn s_id =
-			SQL.delete Course  
+let remove_course_txn c_id =
+			SQL.delete [Course]  
 			 (fun co -> co.c_id=c_id ) 
 
 (*
@@ -76,8 +76,8 @@ let  enroll_txn s_id c_id =
 		let _=SQL.update  Course
 		  (fun c -> c.c_capacity <- c.c_capacity -1 )
 			(fun c -> c.c_id = c_id) in 
-		let new_enroll= {s_id=st.s_id; c_id=co.c_id } in 
-		  SQl.insert Enroll new_enroll
+		let en= {e_s_id=st.s_id; e_c_id=co.c_id } in 
+		  SQL.insert Enroll en
 			
 (*
  * removing  a course enrolmnet. 
@@ -89,10 +89,57 @@ let disenroll_txn s_id c_id =
 			let _=SQL.update  Course
 		  (fun c -> c.c_capacity <- c.c_capacity +1 )
 			(fun c -> c.c_id = c_id) in 
-	  			SQL.delete Enroll  
-			 (fun en -> en.c_id=c_id &&  en.s_id=s_id ) 
+	  			SQL.delete [Enroll]  
+			 (fun en -> en.e_c_id=c_id &&  en.e_s_id=s_id ) 
 			
-	Printf.printf "Result: %s\n" ;;
+(*
+ * Invariants
+ *)
+(*let inv1 () = 
+   let css= SQL.select [Course]  in 
+	S.for_all ( fun c -> 
+		c.c_capacity >=0 ) css
+	 
+	 
+	
+
+let inv2()=
+ let ens=SQL.select [Enroll] in 
+S.for_all ( fun en -> 
+	   	let c=SQL.select1 [Course] 
+		      	 (fun c -> c.c_id= en.e_c_id ) in 
+		 	 let s=SQL.select1 [Student] 
+		      	 (fun s -> s.s_id=en.e_s_id ) in 
+          match (c, s) with 
+		| (Some _, Some _) -> true
+               | _ -> false 
+		
+) ens
+*)					 
+					
+					
+					
+						
+						
+						
+						
+						
+		
+		
+		
+		
+		 
+			
+		
+		
+	
+	
+	 
+	
+	
+	
+	
+	
 	
 			 
 	
