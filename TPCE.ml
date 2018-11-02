@@ -1,11 +1,7 @@
 let unimpl () = failwith "Unimpl"
 let print x = ()
 
-
-
-
 module U = Unix
-
 module SQL = struct
   let select = unimpl ()
   let select1 = unimpl ()
@@ -13,8 +9,6 @@ module SQL = struct
   let delete = unimpl ()
   let update = unimpl ()
 end
-
-
 
 
 module S = struct
@@ -52,8 +46,6 @@ end
 	| Result 
 
 
-
-
 type broker = {b_id:id; mutable b_num_trades: int; mutable b_comm_total: int}
 type customer={c_id: id;c_tax_id : id;  c_tier:int }
 type customer_account={ca_id:id; ca_b_id:id; ca_c_id:id; mutable ca_bal: int ; mutable ca_tax_st: int}
@@ -84,22 +76,22 @@ type result={mutable h_id: id; mutable buy: int ; mutable sell: int ; mutable ne
 (*
  * Trade Status (read-only) transaction.
  *)		
-	let trade_status_txn  acct_id=
-		let ts=SQL.select [Trade; Status_type ; Trade_type ; Security; Exchange] 
-		   (fun t -> t.t_ca_id= acct_id )
-		  (fun t -> fun s -> t.t_st_id= s.st_id)
-			(fun t-> fun tt -> t.t_tr_type= tt.tt_id) 
-			(fun t-> fun se -> t.t_symb= se.s_symb)
-			 (fun se-> fun ex -> se.s_ex_id= ex.ex_id)
-			in ( S.foreach ( fun t -> 
-				print  t.t_id ;
-				 ) ts )
+let trade_status_txn  acct_id=
+  let ts=SQL.select [Trade; Status_type ; Trade_type ; Security; Exchange] 
+	 (fun t -> t.t_ca_id= acct_id )
+         (fun t -> fun s -> t.t_st_id= s.st_id)
+	 (fun t-> fun tt -> t.t_tr_type= tt.tt_id) 
+	 (fun t-> fun se -> t.t_symb= se.s_symb)
+	 (fun se-> fun ex -> se.s_ex_id= ex.ex_id)
+	  in ( S.foreach ( fun t -> 
+	     print  t.t_id ;
+		 ) ts )
 				
 (*
  * Trade lookup (read-only) transaction.
  *)		
 
-	let trade_lookup_txn frame_to_execute max_trades  acct_id  symbol start_trade_dts end_trade_dts (trade_ids: id list)= 
+let trade_lookup_txn frame_to_execute max_trades  acct_id  symbol start_trade_dts end_trade_dts (trade_ids: id list)= 
 		if(frame_to_execute ==1) 
 		 then begin
 			   let  i=0 in 
